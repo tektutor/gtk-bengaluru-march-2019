@@ -1,6 +1,6 @@
 You can compile this application with the below command
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-g++ main.cpp mydlg.cpp `pkg-config gtkmm-3.0 --cflags --libs` -o main
+g++ main.cpp dialog.cpp `pkg-config gtkmm-3.0 --cflags --libs` -o main
 
 You can execute the application as shown below
 ./main
