@@ -6,20 +6,23 @@ Dialog::Dialog() {
 	set_size_request ( 250, 100 );
 	set_border_width ( 10 );
 
-	genderLabel.set_label ( "Gender" );
+	genderLabel.set_label ( "Combo Box" );
 
 	comboModel = Gtk::ListStore::create (modelRecord);
 	genderComboBox.set_model ( comboModel );
 
-	Gtk::TreeModel::Row firstValue = *(comboModel->append());
-	firstValue[modelRecord.genderName] = "Male";
+	Gtk::TreeModel::Row firstRow = *(comboModel->append());
+	firstRow[modelRecord.firstName] = "Suresh";
+	firstRow[modelRecord.age] = 30;
 
-	Gtk::TreeModel::Row secondValue = *(comboModel->append());
-	secondValue[modelRecord.genderName] = "Female";
+	Gtk::TreeModel::Row secondRow= *(comboModel->append());
+	secondRow[modelRecord.firstName] = "Rahul";
+	secondRow[modelRecord.age] = 29;
 
-	genderComboBox.pack_start ( modelRecord.genderName );
+	genderComboBox.pack_start ( modelRecord.firstName );
+	genderComboBox.pack_start ( modelRecord.age );
 
-	genderComboBox.set_active ( 1 );
+	genderComboBox.set_active ( 0 );
 
 	hBox.add ( genderLabel );
 	hBox.add ( genderComboBox );
@@ -40,7 +43,8 @@ void Dialog::onGenderSelected() {
 	
 	if ( pos ) {
 		Gtk::TreeModel::Row value  = *pos;
-		std::cout << value[modelRecord.genderName]<< " is selected." << std::endl;
+		std::cout << value[modelRecord.firstName] << std::endl;
+		std::cout << value[modelRecord.age ]  << std::endl;
 	}
 }
 

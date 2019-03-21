@@ -9,10 +9,12 @@
 class ModelRecord: public Gtk::TreeModel::ColumnRecord {
 public:
 	ModelRecord() { 
-		add ( genderName );
+		add ( firstName);
+		add ( age);
 	}
 
-	Gtk::TreeModelColumn<Glib::ustring> genderName;
+	Gtk::TreeModelColumn<Glib::ustring> firstName;
+	Gtk::TreeModelColumn<int> age;
 };
 
 #endif /* __MODELCOLUMNS_H */
