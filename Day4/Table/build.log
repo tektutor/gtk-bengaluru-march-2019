@@ -1,0 +1,37 @@
+dialog.cpp: In member function ‘void Dialog::populateData()’:
+dialog.cpp:87:17: error: request for member ‘set_text’ in ‘* firstNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  firstNameIter->set_text("AAAA");
+                 ^~~~~~~~
+dialog.cpp:88:16: error: request for member ‘set_text’ in ‘* lastNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  lastNameIter->set_text("BBBBB");
+                ^~~~~~~~
+dialog.cpp:89:14: error: request for member ‘set_text’ in ‘* doorNoIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  doorNoIter->set_text("1111");
+              ^~~~~~~~
+dialog.cpp:95:17: error: request for member ‘set_text’ in ‘* firstNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  firstNameIter->set_text("XXXXXX");
+                 ^~~~~~~~
+dialog.cpp:96:16: error: request for member ‘set_text’ in ‘* lastNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  lastNameIter->set_text("YYYYYY");
+                ^~~~~~~~
+dialog.cpp:97:14: error: request for member ‘set_text’ in ‘* doorNoIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  doorNoIter->set_text("22222");
+              ^~~~~~~~
+dialog.cpp:103:17: error: request for member ‘set_text’ in ‘* firstNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  firstNameIter->set_text("YYYYYYY");
+                 ^~~~~~~~
+dialog.cpp:104:16: error: request for member ‘set_text’ in ‘* lastNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  lastNameIter->set_text("YYYYYYYY");
+                ^~~~~~~~
+dialog.cpp:105:14: error: request for member ‘set_text’ in ‘* doorNoIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  doorNoIter->set_text("3333");
+              ^~~~~~~~
+dialog.cpp:111:17: error: request for member ‘set_text’ in ‘* firstNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  firstNameIter->set_text("ZZZZZ");
+                 ^~~~~~~~
+dialog.cpp:112:16: error: request for member ‘set_text’ in ‘* lastNameIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  lastNameIter->set_text("ZZZZZ");
+                ^~~~~~~~
+dialog.cpp:113:14: error: request for member ‘set_text’ in ‘* doorNoIter.std::_List_iterator<Gtk::Entry*>::operator->()’, which is of pointer type ‘Gtk::Entry*’ (maybe you meant to use ‘->’ ?)
+  doorNoIter->set_text("4444");
+              ^~~~~~~~

@@ -8,6 +8,14 @@
 #include <gtkmm/entry.h>
 #include <gtkmm/label.h>
 #include <gtkmm/button.h>
+#include <gtkmm/scrolledwindow.h>
+
+#include <iostream>
+#include <list>
+#include <iterator>
+#include <map>
+
+#include "userdetails.h"
 
 class Dialog : public Gtk::Window {
 public:
@@ -15,14 +23,27 @@ public:
 	virtual ~Dialog();
 private:
 	void populateData();
+
+protected:
+	void onEditButtonClicked(int row);
+	void onDeleteButtonClicked(int row);
 private:
 	Gtk::Table table;
-	Gtk::Entry firstName[4], lastName[4], doorNo[4], street[4], city[4], state[4];
+	std::list<Gtk::Entry*> firstNameList;
+	std::list<Gtk::Entry*> lastNameList;
+	std::list<Gtk::Entry*> doorNoList;
+	std::list<Gtk::Button*> editButtonList;
+	std::list<Gtk::Button*> deleteButtonList;
+
 	Gtk::VBox vBox;
 
-	Gtk::Label labelFirstName, labelLastName, labelGender, labelDoorNo, labelStreet, labelCity, labelState;
-	Gtk::Entry editFirstName,  editLastName, editDoorNo, editStreet, editCity, editState;
+	Gtk::Label labelFirstName, labelLastName, labelDoorNo;
+	Gtk::Entry editFirstName,  editLastName, editDoorNo;
 	Gtk::Grid grid;
+
+	Gtk::ScrolledWindow scrollWindow;
+
+	std::map<int, UserDetails*> userDetailsMap; 
 
 };
 
